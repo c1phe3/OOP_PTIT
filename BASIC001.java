@@ -9,6 +9,6 @@ public class BASIC001{
             String s = ss.nextLine();
             System.out.println(s);
         }
-
+        ss.close();
     }
 }

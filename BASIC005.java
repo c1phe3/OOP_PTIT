@@ -13,5 +13,6 @@ public class BASIC005{
             int num5 = ss.nextInt();
             System.out.println(num1 + num2 + num3 + num4 + num5);
         }
+        ss.close();
     }
 }

@@ -52,7 +52,7 @@ class Circle extends Shape {
 }
 
 // Lớp chính để đọc input và xuất kết quả
-public class main {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();  // số lượng test case
