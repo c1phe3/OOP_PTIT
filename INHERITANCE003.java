@@ -1,5 +1,6 @@
 import java.util.*;
 
+@SuppressWarnings("unused")
 class Person{
     private String name;
     private String address;
