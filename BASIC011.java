@@ -51,5 +51,6 @@ public class BASIC011{
             String numSplit = num.replaceAll(" ", "");   // thay thế các ký tự khoảng cách bằng các ký tự trống (dùng để tách các khoảng cách trong chuỗi)
             System.out.println(minGap(numSplit));
         }
+        sc.close();
     }    
 }

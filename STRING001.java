@@ -13,5 +13,6 @@ public class STRING001{
             int temp3 = Integer.parseInt(temp1[1]);
             System.out.println("The character at position " + temp3 + " is " + temp2.charAt(temp3));
         }
+        sc.close();
     }
 }

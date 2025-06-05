@@ -1,5 +1,6 @@
 import java.util.*;
 
+@SuppressWarnings("unused")
 class Produ {
     private String name;
     private String location;

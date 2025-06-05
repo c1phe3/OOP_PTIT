@@ -1,5 +1,6 @@
 import java.util.*;
 
+@SuppressWarnings("unused")
 public class test1{
     static boolean isPrime(int num){
         for (int i = 2; i < num; i++){

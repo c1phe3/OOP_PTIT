@@ -51,6 +51,6 @@ public class EXCEPTION002{
                 System.out.println(e.getMessage());
             }
         }
-
+        sc.close();
     }
 }

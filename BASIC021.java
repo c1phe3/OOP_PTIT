@@ -15,5 +15,6 @@ public class BASIC021{
             sum += factorials;
         }
         System.out.println("The sum of these factorials is: " + sum);
+        sc.close();
     }
 }

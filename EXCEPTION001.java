@@ -79,5 +79,6 @@ public class EXCEPTION001{
                 System.out.println(e.getMessage());
             }
         }
+        sc.close();
     }
 }

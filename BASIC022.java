@@ -25,6 +25,7 @@ public class BASIC022{
         int num = sc.nextInt();
         if (num < 0){
             System.out.println("Invalid input. Please enter a positive integer.");
+            sc.close();
             return;
         }
         int count = 0;
