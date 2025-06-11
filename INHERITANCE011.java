@@ -392,6 +392,7 @@ class FixedAsset extends Asset{
 }
 
 class CurrentAsset extends Asset{
+    @SuppressWarnings("unused")
     private int liquidationValue;
 
     CurrentAsset(String name, double value, int liquidationValue){
