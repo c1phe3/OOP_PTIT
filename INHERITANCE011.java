@@ -180,5 +180,151 @@ public class INHERITANCE011{
         }
         System.out.println("Total Value of Assets: " + asset.getTotalValue());
         System.out.println("Total Depreciation of Assets: " + asset.getTotalDepreciation());
+        sc.close();
     }
 }
+
+
+/*
+import java.util.*;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
+class Asset {
+    String name;
+    double value;
+
+    Asset(String name, double value) {
+        this.name = name;
+        this.value = value;
+    }
+
+    String getName(){
+        return name;
+    }
+
+    double getValue(){
+        return value;
+    }
+
+    double getDepreciation(){
+        return 0;
+    }
+
+    protected double round1Decimal(double number) {
+        return new BigDecimal(number).setScale(1, RoundingMode.HALF_UP).doubleValue();
+    }
+}
+
+class FixedAsset extends Asset {
+    private int usefulLife;
+
+    FixedAsset(String name, double value, int usefulLife){
+        super(name, value);
+        this.usefulLife = usefulLife;
+    }
+
+    @Override
+    double getDepreciation(){
+        return round1Decimal(value / usefulLife);
+    }
+}
+
+class CurrentAsset extends Asset {
+    private int liquidationValue;
+
+    CurrentAsset(String name, double value, int liquidationValue){
+        super(name, value);
+        this.liquidationValue = liquidationValue;
+    }
+
+    @Override
+    double getDepreciation(){
+        return round1Decimal(value * 0.1);
+    }
+}
+
+class IntangibleAsset extends Asset {
+    private int amortizationPeriod;
+
+    IntangibleAsset(String name, double value, int amortizationPeriod){
+        super(name, value);
+        this.amortizationPeriod = amortizationPeriod;
+    }
+
+    @Override
+    double getDepreciation(){
+        return round1Decimal(value / amortizationPeriod);
+    }
+}
+
+class AssetManager {
+    List<Asset> assets;
+
+    AssetManager(){
+        assets = new ArrayList<>();
+    }
+
+    void addAsset(Asset asset){
+        assets.add(asset);
+    }
+
+    double getTotalDepreciation(){
+        double total = 0;
+        for (Asset asset : assets) {
+            total += asset.getDepreciation();
+        }
+        return new BigDecimal(total).setScale(1, RoundingMode.HALF_UP).doubleValue();
+    }
+
+    double getTotalValue(){
+        double total = 0;
+        for (Asset asset : assets) {
+            total += asset.getValue();
+        }
+        return total;
+    }
+}
+
+public class INHERITANCE011 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int numtest = sc.nextInt(); sc.nextLine();
+        AssetManager manager = new AssetManager();
+
+        for (int i = 0; i < numtest; i++) {
+            String line = sc.nextLine();
+            String[] parts = line.split(" ");
+            String type = parts[0];
+            String name = parts[1];
+            double value = Double.parseDouble(parts[2]);
+            int attr = Integer.parseInt(parts[3]);
+
+            Asset asset = null;
+
+            switch (type) {
+                case "FixedAsset":
+                    asset = new FixedAsset(name, value, attr); break;
+                case "CurrentAsset":
+                    asset = new CurrentAsset(name, value, attr); break;
+                case "IntangibleAsset":
+                    asset = new IntangibleAsset(name, value, attr); break;
+            }
+
+            if (asset != null) {
+                manager.addAsset(asset);
+                System.out.println("Asset Name: " + asset.getName());
+                System.out.println("Asset Value: " + asset.getValue());
+                System.out.println("Depreciation: " + asset.getDepreciation());
+                System.out.println("---------------------------");
+            }
+        }
+
+        System.out.println("Total Value of Assets: " + manager.getTotalValue());
+        System.out.println("Total Depreciation of Assets: " + manager.getTotalDepreciation());
+
+        sc.close();
+    }
+}
+
+ */
