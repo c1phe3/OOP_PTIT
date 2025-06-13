@@ -267,6 +267,81 @@ public class GENERIC020 {
             }
         }
     }
+
+    /*
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+        int s = sc.nextInt();
+        sc.nextLine();
+        for (int l = 0; l < s; l++){
+            String line = sc.nextLine();
+            while(!(line.equals("End"))){
+            
+                String[] temp = line.split(" ");
+            
+                if (temp[0].equals("FilterIntEven")){
+                    List<Integer> list = new ArrayList<>();
+                    int number = Integer.parseInt(temp[1]);     // số chữ số đằng sau
+                    for (int i = 0; i < number; i++){
+                        if (Integer.parseInt(temp[i + 2]) % 2 == 0){
+                            list.add(Integer.parseInt(temp[i + 2])); // temp[3] temp[4]
+                        }
+                    } 
+                    if (list.isEmpty()){
+                        System.out.println("None");
+                    }
+                    else if (list.size() > 0){
+                        for (int i = 0; i < list.size(); i++){
+                            System.out.println(list.get(i));
+                        }
+                    }
+
+                }
+            
+                if (temp[0].equals("FilterStringLength")){
+                    List<String> list = new ArrayList<>();
+                    int minlen = Integer.parseInt(temp[1]);  
+                    int number = Integer.parseInt(temp[2]);   
+                    for (int i = 0; i < number; i++){
+                        if (temp[i + 3].length() >= minlen){
+                            list.add(temp[i + 3]);
+                        }
+                    } 
+                    if (list.isEmpty()){
+                        System.out.println("None");
+                    }else if(list.size() > 0){
+                        for (int i = 0; i < list.size(); i++){
+                            System.out.println(list.get(i));
+                        }
+                    }
+
+                }
+
+                if (temp[0].equals("FilterEmployeeSalary")){
+                    List<Employeeg> list = new ArrayList<>();
+                    int minSalary = Integer.parseInt(temp[1]);  
+                    int number = Integer.parseInt(temp[2]);   
+                    for (int i = 0; i < number * 2; i += 2){
+                        Employeeg e = new Employeeg(temp[i + 3], Double.parseDouble(temp[i + 4]));
+                        if (e.getSalary() >= minSalary){
+                            list.add(e);
+                        }
+                    } 
+                    if (list.isEmpty()){
+                        System.out.println("None");
+                    }else if(list.size() > 0){
+                        for (int i = 0; i < list.size(); i++){
+                            System.out.println(list.get(i).getName() + " " + list.get(i).getSalary());
+                        }
+                    }
+                }
+            
+                line = sc.nextLine();
+            }
+        }
+        
+    }
+     */
 }
 
 
