@@ -16,3 +16,6 @@ public class BASIC005{
         ss.close();
     }
 }
+
+
+// nhớ luyện nhiều vào k quên đấy
